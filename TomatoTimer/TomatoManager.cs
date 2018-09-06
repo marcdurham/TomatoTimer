@@ -78,6 +78,11 @@ namespace TomatoTimer
                     Done();
                     break;
             }
+
+            int minutes = ticks / SecondsPerMinute;
+            int seconds = ticks % SecondsPerMinute;
+
+            notifyIcon.Text = $"Remaining {minutes}:{seconds}";
             
             ticks--;
         }
