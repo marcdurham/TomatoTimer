@@ -6,6 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,8 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TomatoManagerForm));
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // TomatoManagerForm
             // 
@@ -40,6 +48,7 @@
             this.Name = "TomatoManagerForm";
             this.Text = "Tomato Manager";
             this.UseWaitCursor = true;
+            this.Resize += new System.EventHandler(this.TomatoManagerForm_Resize);
             this.ResumeLayout(false);
 
         }
