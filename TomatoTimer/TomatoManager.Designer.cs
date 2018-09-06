@@ -43,7 +43,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 2000;
+            this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // startButton
