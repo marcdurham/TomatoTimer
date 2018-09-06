@@ -5,7 +5,9 @@ namespace TomatoTimer
 {
     public partial class TomatoManagerForm : Form
     {
-        int ticks = 0;
+        const int Duration = 5;
+
+        int ticks = Duration;
 
         public TomatoManagerForm()
         {
@@ -14,15 +16,23 @@ namespace TomatoTimer
 
         private void TomatoManagerForm_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                Hide();
-                notifyIcon.Visible = true;
-                timer.Start();
-            }
+            StartTomato();
+        }
+
+        private void StartTomato()
+        {
+            Hide();
+            notifyIcon.Visible = true;
+            ticks = Duration;
+            timer.Start();
         }
 
         private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ShowTomatoManager();
+        }
+
+        private void ShowTomatoManager()
         {
             Show();
             this.WindowState = FormWindowState.Normal;
@@ -31,16 +41,47 @@ namespace TomatoTimer
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            ticks++;
+            switch (ticks)
+            {
+                case 25:
+                    notifyIcon.Icon = Properties.Resources.TwentyFive;
+                    break;
+                case 15:
+                    notifyIcon.Icon = Properties.Resources.Fifteen;
+                    break;
+                case 5:
+                    notifyIcon.Icon = Properties.Resources.Five;
+                    break;
+                case 4:
+                    notifyIcon.Icon = Properties.Resources.Four;
+                    break;
+                case 3:
+                    notifyIcon.Icon = Properties.Resources.Three;
+                    break;
+                case 2:
+                    notifyIcon.Icon = Properties.Resources.Two;
+                    break;
+                case 1:
+                    notifyIcon.Icon = Properties.Resources.One;
+                    break;
+                case 0:
+                    notifyIcon.Icon = Properties.Resources.Zero;
+                    Done();
+                    break;
+            }
+            
+            ticks--;
+        }
 
-            if (ticks % 2 == 0)
-            {
-                notifyIcon.Icon = Properties.Resources.Tomato5;
-            }
-            else
-            {
-                notifyIcon.Icon = Properties.Resources.Tomato10;
-            }
+        void Done()
+        {
+            timer.Stop();
+            ShowTomatoManager();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            StartTomato();
         }
     }
 }
