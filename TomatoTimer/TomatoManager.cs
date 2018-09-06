@@ -23,6 +23,11 @@ namespace TomatoTimer
         public TomatoManagerForm()
         {
             InitializeComponent();
+            StartTomato();
+        }
+
+        private void TomatoManagerForm_Load(object sender, EventArgs e)
+        {
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -79,7 +84,7 @@ namespace TomatoTimer
                     notifyIcon.Icon = Properties.Resources.One;
                     break;
                 case Zero:
-                    notifyIcon.Icon = Properties.Resources.Zero;
+                    notifyIcon.Icon = Properties.Resources.Tomato;
                     Done();
                     break;
             }
