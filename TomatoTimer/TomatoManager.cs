@@ -35,11 +35,11 @@ namespace TomatoTimer
 
             if (ticks % 2 == 0)
             {
-                notifyIcon.Visible = false;
+                notifyIcon.Icon = Properties.Resources.Tomato5;
             }
             else
             {
-                notifyIcon.Visible = true;
+                notifyIcon.Icon = Properties.Resources.Tomato10;
             }
         }
     }
