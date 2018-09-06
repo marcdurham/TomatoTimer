@@ -5,7 +5,7 @@ namespace TomatoTimer
 {
     public partial class TomatoManagerForm : Form
     {
-        const int SecondsPerMinute = 1; //60;
+        const int SecondsPerMinute = 60;
         const int TwentyFive = 25 * SecondsPerMinute;
         const int Twenty = 20 * SecondsPerMinute;
         const int Fifteen = 15 * SecondsPerMinute;
@@ -16,7 +16,7 @@ namespace TomatoTimer
         const int Two = 2 * SecondsPerMinute;
         const int One = 1 * SecondsPerMinute;
         const int Zero = 0;
-        const int Duration = 5; // TwentyFive;
+        const int Duration = TwentyFive;
 
         int ticks = Duration;
 
