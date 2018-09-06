@@ -39,7 +39,7 @@
             // notifyIcon
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
             // timer
             // 
@@ -54,6 +54,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.UseWaitCursor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // TomatoManagerForm
@@ -66,7 +67,6 @@
             this.Name = "TomatoManagerForm";
             this.Text = "Tomato Manager";
             this.UseWaitCursor = true;
-            this.Resize += new System.EventHandler(this.TomatoManagerForm_Resize);
             this.ResumeLayout(false);
 
         }

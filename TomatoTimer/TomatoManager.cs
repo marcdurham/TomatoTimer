@@ -6,7 +6,7 @@ namespace TomatoTimer
     public partial class TomatoManagerForm : Form
     {
         const int SecondsPerMinute = 60;
-        const int TwentyFive = 25 * SecondsPerMinute;;
+        const int TwentyFive = 25 * SecondsPerMinute;
         const int Twenty = 20 * SecondsPerMinute;
         const int Fifteen = 15 * SecondsPerMinute;
         const int Ten = 10 * SecondsPerMinute;
@@ -25,32 +25,29 @@ namespace TomatoTimer
             InitializeComponent();
         }
 
-        private void TomatoManagerForm_Resize(object sender, EventArgs e)
+        private void startButton_Click(object sender, EventArgs e)
         {
             StartTomato();
         }
 
-        private void StartTomato()
-        {
-            Hide();
-            notifyIcon.Visible = true;
-            ticks = Duration;
-            timer.Start();
-        }
-
-        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
         {
             ShowTomatoManager();
         }
 
-        private void ShowTomatoManager()
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            DecrementTimer();
+        }
+
+        void ShowTomatoManager()
         {
             Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        void DecrementTimer()
         {
             switch (ticks)
             {
@@ -91,7 +88,7 @@ namespace TomatoTimer
             int seconds = ticks % SecondsPerMinute;
 
             notifyIcon.Text = $"Remaining {minutes}:{seconds}";
-            
+
             ticks--;
         }
 
@@ -101,9 +98,12 @@ namespace TomatoTimer
             ShowTomatoManager();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        void StartTomato()
         {
-            StartTomato();
+            Hide();
+            notifyIcon.Visible = true;
+            ticks = Duration;
+            timer.Start();
         }
     }
 }
