@@ -26,10 +26,6 @@ namespace TomatoTimer
             StartTomato();
         }
 
-        private void TomatoManagerForm_Load(object sender, EventArgs e)
-        {
-        }
-
         private void startButton_Click(object sender, EventArgs e)
         {
             StartTomato();

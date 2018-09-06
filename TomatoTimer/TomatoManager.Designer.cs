@@ -66,7 +66,6 @@
             this.Name = "TomatoManagerForm";
             this.Text = "Tomato Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.Load += new System.EventHandler(this.TomatoManagerForm_Load);
             this.ResumeLayout(false);
 
         }
