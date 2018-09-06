@@ -5,7 +5,16 @@ namespace TomatoTimer
 {
     public partial class TomatoManagerForm : Form
     {
-        const int Duration = 5;
+        const int SecondsPerMinute = 60;
+        const int Duration = 25 * SecondsPerMinute;
+        const int TwentyFive = Duration;
+        const int Fifteen = 15 * SecondsPerMinute;
+        const int Five = 5 * SecondsPerMinute;
+        const int Four = 4 * SecondsPerMinute;
+        const int Three = 3 * SecondsPerMinute;
+        const int Two = 2 * SecondsPerMinute;
+        const int One = 1 * SecondsPerMinute;
+        const int Zero = 0;
 
         int ticks = Duration;
 
@@ -43,28 +52,28 @@ namespace TomatoTimer
         {
             switch (ticks)
             {
-                case 25:
+                case TwentyFive:
                     notifyIcon.Icon = Properties.Resources.TwentyFive;
                     break;
-                case 15:
+                case Fifteen:
                     notifyIcon.Icon = Properties.Resources.Fifteen;
                     break;
-                case 5:
+                case Five:
                     notifyIcon.Icon = Properties.Resources.Five;
                     break;
-                case 4:
+                case Four:
                     notifyIcon.Icon = Properties.Resources.Four;
                     break;
-                case 3:
+                case Three:
                     notifyIcon.Icon = Properties.Resources.Three;
                     break;
-                case 2:
+                case Two:
                     notifyIcon.Icon = Properties.Resources.Two;
                     break;
-                case 1:
+                case One:
                     notifyIcon.Icon = Properties.Resources.One;
                     break;
-                case 0:
+                case Zero:
                     notifyIcon.Icon = Properties.Resources.Zero;
                     Done();
                     break;

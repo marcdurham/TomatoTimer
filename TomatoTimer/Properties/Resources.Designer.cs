@@ -113,6 +113,16 @@ namespace TomatoTimer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon Tomato {
+            get {
+                object obj = ResourceManager.GetObject("Tomato", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon Tomato10 {
             get {
                 object obj = ResourceManager.GetObject("Tomato10", resourceCulture);
