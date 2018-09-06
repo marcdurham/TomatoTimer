@@ -63,6 +63,56 @@ namespace TomatoTimer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon Fifteen {
+            get {
+                object obj = ResourceManager.GetObject("Fifteen", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Five {
+            get {
+                object obj = ResourceManager.GetObject("Five", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Four {
+            get {
+                object obj = ResourceManager.GetObject("Four", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon One {
+            get {
+                object obj = ResourceManager.GetObject("One", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Three {
+            get {
+                object obj = ResourceManager.GetObject("Three", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon Tomato10 {
             get {
                 object obj = ResourceManager.GetObject("Tomato10", resourceCulture);
@@ -76,6 +126,36 @@ namespace TomatoTimer.Properties {
         internal static System.Drawing.Icon Tomato5 {
             get {
                 object obj = ResourceManager.GetObject("Tomato5", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon TwentyFive {
+            get {
+                object obj = ResourceManager.GetObject("TwentyFive", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Two {
+            get {
+                object obj = ResourceManager.GetObject("Two", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Zero {
+            get {
+                object obj = ResourceManager.GetObject("Zero", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
