@@ -45,7 +45,7 @@ namespace TomatoTimer
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-            notifyIcon.Visible = false;
+            notifyIcon.Visible = true;
         }
 
         void DecrementTimer()
