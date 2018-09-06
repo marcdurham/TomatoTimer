@@ -83,10 +83,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Ten.ico" />
+    <None Include="Twenty.ico" />
     <None Include="Zero.ico" />
     <None Include="Two.ico" />
     <None Include="TwentyFive.ico" />
-    <None Include="Fifteen.ico" />
     <None Include="Five.ico" />
     <None Include="Four.ico" />
     <None Include="One.ico" />
