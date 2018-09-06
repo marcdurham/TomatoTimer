@@ -32,12 +32,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TomatoManagerForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // notifyIcon
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
+            // timer1
+            // 
+            this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // TomatoManagerForm
             // 
@@ -54,6 +60,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timer;
     }
 }
 

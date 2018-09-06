@@ -5,6 +5,8 @@ namespace TomatoTimer
 {
     public partial class TomatoManagerForm : Form
     {
+        int ticks = 0;
+
         public TomatoManagerForm()
         {
             InitializeComponent();
@@ -16,6 +18,7 @@ namespace TomatoTimer
             {
                 Hide();
                 notifyIcon.Visible = true;
+                timer.Start();
             }
         }
 
@@ -24,6 +27,20 @@ namespace TomatoTimer
             Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            ticks++;
+
+            if (ticks % 2 == 0)
+            {
+                notifyIcon.Visible = false;
+            }
+            else
+            {
+                notifyIcon.Visible = true;
+            }
         }
     }
 }
