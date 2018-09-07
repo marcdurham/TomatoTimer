@@ -1,0 +1,3 @@
+[submodule "DeploymentScripts"]
+	path = DeploymentScripts
+	url = https://marcdurham@bitbucket.org/marcdurham/deploymentscripts.git
