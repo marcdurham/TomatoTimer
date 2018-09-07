@@ -123,7 +123,9 @@
     <None Include="Four.ico" />
     <None Include="One.ico" />
     <None Include="Three.ico" />
-    <None Include="Tomato.ico" />
+    <None Include="Tomato.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Revision.txt" />
     <Content Include="Tomato10.ico" />
     <None Include="Tomato5.ico" />

@@ -27,11 +27,11 @@ $files = `
 Create-ClickOnce $files `
     -AppProperName "TomatoTimer" `
     -AppShortName "TomatoTimer" `
-    -IconFilename "TomatoTimer.ico" `
+    -IconFilename "Tomato.ico" `
     -Publisher "Marc Durham" `
-    -OutputDir "../../ClickOnceDeploy/TomatoTimer" `
-    -CertFile "./TomatoTimer_TemporaryKey.pfx" `
-    -DeploymentUrl "http://downloads.md9.us/TomatoTimer" `
+    -OutputDir "../../../../ClickOnceDeploy" `
+    -CertFile "../../TomatoTimer_TemporaryKey.pfx" `
+    -DeploymentUrl "http://downloads.md9.us" `
     -AmazonRegion "us-west-2" `
     -BucketName "downloads.md9.us" `
     -ErrorAction Stop
