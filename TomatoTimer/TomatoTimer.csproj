@@ -98,6 +98,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Deploy.ps1" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +124,7 @@
     <None Include="One.ico" />
     <None Include="Three.ico" />
     <None Include="Tomato.ico" />
+    <Content Include="Revision.txt" />
     <Content Include="Tomato10.ico" />
     <None Include="Tomato5.ico" />
   </ItemGroup>
