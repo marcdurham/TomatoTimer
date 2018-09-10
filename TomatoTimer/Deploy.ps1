@@ -4,7 +4,7 @@ Import-Module ..\DeploymentScripts\ClickOnce-Module.psm1
 
 #Build project
 #"Building..."
-#msbuild.exe LoopCalc.csproj /p:Configuration=Release /p:TargetVersion=4.0 /restore:True
+msbuild.exe TomatoTimer.csproj /p:Configuration=Release /p:TargetVersion=4.7.1 /restore:True
 
 #pushd .\
 #cd ".\bin\Release"
