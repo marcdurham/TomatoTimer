@@ -94,10 +94,14 @@ namespace TomatoTimer
             notifyIcon.Text = $"Remaining {minutes}:{seconds}";
 
             Bitmap bmp = new Bitmap(16, 16, PixelFormat.Format24bppRgb);
+            //var font = new Font(FontFamily.GenericSansSerif, 10.0);
+            var font = new Font("Sans Serif", 10.0f);
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.FillEllipse(Brushes.Red, 0, 0, 16, 16);
-                g.FillRectangle(Brushes.White, 4, 6, 8, 4);
+                //g.FillEllipse(Brushes.Red, 0, 0, 16, 16);
+                //g.FillRectangle(Brushes.White, 4, 6, 8, 4);
+
+                g.DrawString($"{seconds}", font, Brushes.Green, 0.0f, 0.0f);
             }
             notifyIcon.Icon = Converter.BitmapToIcon(bmp);
 
