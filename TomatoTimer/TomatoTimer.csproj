@@ -52,10 +52,10 @@
     <ApplicationIcon>Tomato.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>45E607773AE0F84113FF2490CC4A886964140682</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3A8A3949851919D756B70C5592C5FE53D2439838</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>TomatoTimer_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>TomatoTimer_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
