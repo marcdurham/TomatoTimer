@@ -53,16 +53,23 @@ namespace TomatoTimer
 
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.DrawString($"{minutes}", font, Brushes.White, 0.0f, 0.0f);
+                if (minutes == 0)
+                    g.DrawString($"{seconds:00}", font, Brushes.White, 0.0f, 0.0f);
+                else
+                    g.DrawString($"{minutes}", font, Brushes.White, 0.0f, 0.0f);
             }
 
             notifyIcon.Icon = Converter.BitmapToIcon(bmp);
+
+            if (ticks == 0)
+                Done();
 
             ticks--;
         }
 
         void Done()
         {
+            notifyIcon.Icon = Properties.Resources.Tomato;
             timer.Stop();
             ShowTomatoManager();
             MessageBox.Show(
