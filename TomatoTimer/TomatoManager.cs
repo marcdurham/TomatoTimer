@@ -1,8 +1,8 @@
-﻿using FlimFlan.IconEncoder;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using FlimFlan.IconEncoder;
 
 namespace TomatoTimer
 {
@@ -49,12 +49,11 @@ namespace TomatoTimer
             notifyIcon.Text = $"Remaining {minutes}:{seconds}";
 
             var bmp = new Bitmap(16, 16, PixelFormat.Format24bppRgb);
-            var font = new Font(FontFamily.GenericSansSerif, 6.0f);
+            var font = new Font(FontFamily.GenericSansSerif, 10.0f);
 
             using (Graphics g = Graphics.FromImage(bmp))
             {
                 g.DrawString($"{minutes}", font, Brushes.White, 0.0f, 0.0f);
-                g.DrawString($"{seconds:00}", font, Brushes.White, 0.0f, 7.0f);
             }
 
             notifyIcon.Icon = Converter.BitmapToIcon(bmp);
