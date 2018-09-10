@@ -100,8 +100,10 @@ namespace TomatoTimer
             {
                 //g.FillEllipse(Brushes.Red, 0, 0, 16, 16);
                 //g.FillRectangle(Brushes.White, 4, 6, 8, 4);
+                if (ticks % 2 == 0)
+                    g.DrawRectangle(Pens.White, 1, 1, 14, 14);
 
-                g.DrawString($"{seconds}", font, Brushes.Green, 0.0f, 0.0f);
+                g.DrawString($"{minutes}", font, Brushes.White, 0.0f, 0.0f);
             }
             notifyIcon.Icon = Converter.BitmapToIcon(bmp);
 
