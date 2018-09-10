@@ -4,18 +4,19 @@
 //
 // You may freely use this code as you wish, I only ask that you retain my name in the source code
 
-using System;
+// Found on codeproject.com https://www.codeproject.com/articles/7122/dynamically-generating-icons-safely
+
 using System.IO;
 
 namespace FlimFlan.IconEncoder
 {
-	/// <summary>
-	/// Provides an in-memory representation of the device independent bitmap format
-	/// </summary>
-	/// <remarks>
-	/// Based on documentation at http://www.whisqu.se/per/docs/graphics52.htm
-	/// </remarks>
-	public class BitmapHolder
+    /// <summary>
+    /// Provides an in-memory representation of the device independent bitmap format
+    /// </summary>
+    /// <remarks>
+    /// Based on documentation at http://www.whisqu.se/per/docs/graphics52.htm
+    /// </remarks>
+    public class BitmapHolder
 	{
 		public BITMAPFILEHEADER fileHeader;
 		public BITMAPINFO info;

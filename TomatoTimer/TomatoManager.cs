@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FlimFlan.IconEncoder;
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace TomatoTimer
@@ -89,6 +92,14 @@ namespace TomatoTimer
             int seconds = ticks % SecondsPerMinute;
 
             notifyIcon.Text = $"Remaining {minutes}:{seconds}";
+
+            Bitmap bmp = new Bitmap(16, 16, PixelFormat.Format24bppRgb);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.FillEllipse(Brushes.Red, 0, 0, 16, 16);
+                g.FillRectangle(Brushes.White, 4, 6, 8, 4);
+            }
+            notifyIcon.Icon = Converter.BitmapToIcon(bmp);
 
             ticks--;
         }
