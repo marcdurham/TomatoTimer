@@ -77,6 +77,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitmapHolder.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="IconHolder.cs" />
+    <Compile Include="ImageStructs.cs" />
     <Compile Include="TomatoManager.cs">
       <SubType>Form</SubType>
     </Compile>
