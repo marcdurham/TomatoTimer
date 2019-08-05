@@ -24,6 +24,11 @@ namespace TomatoTimer
             StartTomato();
         }
 
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            StopTomato();
+        }
+
         private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
         {
             ShowTomatoManager();
@@ -43,17 +48,24 @@ namespace TomatoTimer
 
         void DecrementTimer()
         {
-            int minutes = ticks / SecondsPerMinute;
-            int seconds = ticks % SecondsPerMinute;
-
-            notifyIcon.Text = $"Remaining {minutes}:{seconds}";
-
-            ShowTimeOnIcon(minutes, seconds);
+            ShowTime();
 
             if (ticks == 0)
                 Done();
 
             ticks--;
+        }
+
+        private void ShowTime()
+        {
+            int minutes = ticks / SecondsPerMinute;
+            int seconds = ticks % SecondsPerMinute;
+
+            notifyIcon.Text = $"Remaining {minutes}:{seconds}";
+
+            timeRemaining.Text = $"{minutes}:{seconds}";
+
+            ShowTimeOnIcon(minutes, seconds);
         }
 
         void ShowTimeOnIcon(int minutes, int seconds)
@@ -90,6 +102,13 @@ namespace TomatoTimer
             notifyIcon.Visible = true;
             ticks = Duration;
             timer.Start();
+        }
+
+        void StopTomato()
+        {
+            ticks = 0;
+            timer.Stop();
+            ShowTime();
         }
     }
 }
