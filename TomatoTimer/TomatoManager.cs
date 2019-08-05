@@ -9,7 +9,7 @@ namespace TomatoTimer
     public partial class TomatoManagerForm : Form
     {
         const int SecondsPerMinute = 60;
-        const int Duration = 25 * SecondsPerMinute;
+        const int Duration = 26 * SecondsPerMinute;
 
         int ticks = Duration;
 
@@ -48,6 +48,16 @@ namespace TomatoTimer
 
             notifyIcon.Text = $"Remaining {minutes}:{seconds}";
 
+            ShowTimeOnIcon(minutes, seconds);
+
+            if (ticks == 0)
+                Done();
+
+            ticks--;
+        }
+
+        void ShowTimeOnIcon(int minutes, int seconds)
+        {
             var bmp = new Bitmap(16, 16, PixelFormat.Format24bppRgb);
             var font = new Font(FontFamily.GenericSansSerif, 10.0f);
 
@@ -60,11 +70,6 @@ namespace TomatoTimer
             }
 
             notifyIcon.Icon = Converter.BitmapToIcon(bmp);
-
-            if (ticks == 0)
-                Done();
-
-            ticks--;
         }
 
         void Done()
